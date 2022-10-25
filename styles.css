@@ -230,6 +230,21 @@ footer ul li a:hover {
 main button:hover {
     opacity: .8;
 }
+label{
+    color:black;
+ }
+
+ form{
+    display:flex;
+    flex-direction:column;
+    display:none;
+ }
+
+ #pistas{
+    display:flex;
+    flex-direction:column;
+ }
+
 
 /**
  * Web
