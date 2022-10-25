@@ -1,5 +1,13 @@
 'use strict';
+let bottonSubmit = document.getElementById("submit_disco");
+let formulario = document.getElementById("formulario");
+let nombreDeDisco = document.getElementById("nombre_disco");
+let autorBanda = document.getElementById("autor_banda");
+let codigo = document.getElementById("codigo");
+let buttonNuevaPista = document.getElementById("ingresar_pista");
+let pistasContainer = document.getElementById("pistas");
 
+let pistasCount = 2;
 /*
  * APELLIDO, NOMBRE | APELLIDO, NOMBRE
  */
@@ -39,6 +47,7 @@
 
 // Discos:
 let discos = [];
+
 
 // Función Cargar:
 const Cargar = () => {
