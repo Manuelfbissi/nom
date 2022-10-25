@@ -52,6 +52,7 @@ let discos = [];
 // Función Cargar:
 const Cargar = () => {
     // Cositas:
+    document.getElementById("formulario").style.display = "flex";
 };
 
 // Función Mostrar:
