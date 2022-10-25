@@ -47,6 +47,54 @@ let pistasCount = 2;
 
 // Discos:
 let discos = [];
+formulario.onsubmit = (e) => {
+    e.preventDefault();
+  };
+
+  buttonNuevaPista.addEventListener("click", function () {
+    //creamos label
+  
+    let labelNombre = document.createElement("label");
+    labelNombre.for = "nombre_de pista_" + pistasCount;
+    labelNombre.textContent = "nombre de la pista";
+  
+    let labelDuracion = document.createElement("label");
+    labelDuracion.for = "duracion_" + pistasCount;
+    labelDuracion.textContent = "duracion";
+  
+    //creamos el input
+    let inputNombre = document.createElement("input");
+    inputNombre.type = "text";
+    inputNombre.id = "nombre_de pista_" + pistasCount;
+    inputNombre.classList.add("pistas_nombre");
+  
+    let inputDuracion = document.createElement("input");
+    inputDuracion.type = "number";
+    inputDuracion.id = "duracion_" + pistasCount;
+    inputDuracion.classList.add("pistas_duracion");
+  
+    pistasContainer.appendChild(labelNombre);
+    pistasContainer.appendChild(inputNombre);
+    pistasContainer.appendChild(labelDuracion);
+    pistasContainer.appendChild(inputDuracion);
+  
+    pistasCount++;
+  });
+  bottonSubmit.addEventListener("click", function () {
+    let pistasNombre = document.getElementsByClassName("pistas_nombre"); // HTMLcollection
+    let pistasDuracion = document.getElementsByClassName("pistas_duracion"); // HTMLcollection
+    pistasNombre = Array.from(pistasNombre); // arrays
+    pistasDuracion = Array.from(pistasDuracion); // arrays
+    
+    // let pistas = []
+    let nuevoDisco = {
+      Nombre: nombreDeDisco.value,
+      Autor: autorBanda.value,
+      Codigo: codigo.value,
+    };
+    discos.push(nuevoDisco);
+    console.log("discos:", discos);
+  });
 
 
 // Función Cargar:
