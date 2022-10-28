@@ -16,22 +16,34 @@
             <button onclick="Cargar();">Cargar nuevo disco</button>
             <button onclick="Mostrar();">Mostrar discos</button>
             <div id="info"></div>
+            
             <form id="formulario">
                 <label for="nombre_disco">Nombre del disco</label>
                 <input type="text" id="nombre_disco">
+                <span id="error_message_nombre" class="validation">ingrese un nombre de disco</span>
+                
                 <label for="nombre_disco">Autor o banda</label>
                 <input type="text" id="autor_banda">
+                <span id="error_message_autor" class="validation">ingrese un nombre de disco</span>
+                
                 <label for="codigo">codigo del disco</label>
                 <input type="text" id="codigo">
+                <span id="error_message_codigo" class="validation">ingrese un nombre de disco(debe ser mayor a 0 y menor a 999)</span>
+                
                 <div id="pistas">
                     <label for="nombre_de_pista">nombre de la pista</label>
                     <input type="text" id="nombre_de_pista_1" class="pistas_nombre">
+                    <span id="error_pista_nombre_1" class="validation">ingrese un nombre de pista</span>
+                   
                     <label for="duracion_1">duracion</label>
                     <input type="number" id="duracion_1" class="pistas_duracion">
+                    <span id="error_pista_duracion_1" class="validation">ingrese una duracion de pista</span>
                 </div>
+                
                 <button id="ingresar_pista">ingresar nueva pista</button>
                 <button id="submit_disco">cargar datos</button>
             </form>
+           
             <script src="index.js"></script>
         </main>
         <footer>
